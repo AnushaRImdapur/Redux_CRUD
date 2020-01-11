@@ -35,15 +35,15 @@ class EditComponent extends Component {
         }
         console.log("editcom",this.props.post.id)
         this.props.dispatch({ type: 'UPDATE', id: this.props.post.id, data: data })
-       this.reset() 
+    //    this.reset() 
     }
-    reset(){
-        this.getCompany.value='';
-        this.getLocation.value='';
-        this.getjob.value='';
-        this.getOpening.value='';
-        this.getSalary.value='';
-    }
+    // reset(){
+    //     this.getCompany.value='';
+    //     this.getLocation.value='';
+    //     this.getjob.value='';
+    //     this.getOpening.value='';
+    //     this.getSalary.value='';
+    // }
     render() {
         console.log("datata",this.props.post.id)
         return (

@@ -26,7 +26,7 @@ class Input extends Component {
         var salary=this.getSalary.value;
         var editing=this.state.editing
         const data={
-            id:new Date(),
+            id:Math.floor(Math.random(2000) * 1000),
             company,
             location,
             job,
@@ -39,15 +39,19 @@ class Input extends Component {
             type:"ADD_LIST",
             data
         })
-       this.reset() 
-    }
-    reset(){
         this.getCompany.value='';
         this.getLocation.value='';
         this.getjob.value='';
         this.getOpening.value='';
-        this.getSalary.value='';
+        this.getSalary.value=''; 
     }
+    // reset(){
+    //     this.getCompany.value='';
+    //     this.getLocation.value='';
+    //     this.getjob.value='';
+    //     this.getOpening.value='';
+    //     this.getSalary.value='';
+    // }
     render() {
        return (
             <div>

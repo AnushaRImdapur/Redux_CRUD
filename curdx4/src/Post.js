@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import {connect} from "react-redux"
  class Post extends Component {
      
     render() {
-        console.log(this.props.post.company)
+        console.log("ee",this.props.ids)
         return (
             <tr key={this.props.post.id}>
-                <td>{this.props.post.company}</td>
+                <td><Link to={`/show/${this.props.ids}`}>{this.props.post.company}</Link></td>
                 <td>{this.props.post.location}</td>
                 <td>{this.props.post.job}</td>
                 <td>{this.props.post.opening}</td>
